@@ -2,18 +2,26 @@ package aoc
 
 import "math"
 
-func Max(a, b int) int {
-	if a > b {
-		return a
+func Max(a ...int) int {
+	max := a[0]
+	for i := 1; i < len(a); i++ {
+		v := a[i]
+		if v > max {
+			max = v
+		}
 	}
-	return b
+	return max
 }
 
-func Min(a, b int) int {
-	if a > b {
-		return b
+func Min(a ...int) int {
+	min := a[0]
+	for i := 1; i < len(a); i++ {
+		v := a[i]
+		if v < min {
+			min = v
+		}
 	}
-	return a
+	return min
 }
 
 func Abs(a int) int {
