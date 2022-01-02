@@ -43,3 +43,7 @@ func MinMax(data []int) (min, max int) {
 	}
 	return min, max
 }
+
+func Sqrt(v int) int {
+	return int(math.Sqrt(float64(v)))
+}
